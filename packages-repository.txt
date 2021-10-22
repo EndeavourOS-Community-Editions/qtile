@@ -10,3 +10,4 @@ papirus-icon-theme
 pasystray
 feh
 rofi
+i3lock
