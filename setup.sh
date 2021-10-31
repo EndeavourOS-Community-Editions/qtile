@@ -17,5 +17,6 @@ then
   cp -r .config/qtile ~/.config/
   rm -rf ~/.config/rofi/
   cp -r .config/rofi ~/.config/
+  chmod +x ~/.config/qtile/scripts/low_bat_notifier.sh
   echo 'done'
 fi
