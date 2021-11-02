@@ -6,4 +6,4 @@ picom & disown # --experimental-backends --vsync should prevent screen tearing o
 ~/.config/qtile/scripts/low_bat_notifier.sh & disown
 
 # Start welcome
-eos-welcome
+eos-welcome & disown
