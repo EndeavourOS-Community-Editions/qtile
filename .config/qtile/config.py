@@ -162,6 +162,8 @@ screens = [
     Screen(
         top=bar.Bar(
             [ 
+                widget.Image(filename='~/.config/qtile/eos-c.png', margin=4, mouse_callbacks = {'Button1': lambda: lazy.spawn("rofi -show combi")),
+                widget.Sep(padding=7, linewidth=0)
                 widget.GroupBox(
                     #highlight_method='line', # we don't use this because it looks great but it makes the numbers go up, off center
                                 this_screen_border="#5294e2",
