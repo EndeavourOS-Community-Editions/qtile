@@ -1,6 +1,6 @@
 #!/bin/sh
 
-low_bat_notifier.sh
+./low_bat_notifier.sh
 
 charging="fully-charged"
 not_charging="discharging"
@@ -19,6 +19,6 @@ do
 	if [ "$state" = "$charged" ]; then
 		sleep 300
 	elif [ "$state" = "$not_charging" ] && [ -z "$check_running" ] && [ "$bat_now" -gt "$low_bat" ];then
-		low_bat_notifier.sh
+		./low_bat_notifier.sh
 	fi
 done
