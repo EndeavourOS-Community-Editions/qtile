@@ -1,4 +1,3 @@
-
 # Copyright (c) 2010 Aldo Cortesi
 # Copyright (c) 2010, 2014 dequis
 # Copyright (c) 2012 Randall Ma
@@ -108,6 +107,9 @@ keys = [
         "r",
         lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
+    Key([], "XF86AudioRaiseVolume",lazy.spawn("amixer set Master 3%+")),
+    Key([], "XF86AudioLowerVolume",lazy.spawn("amixer set Master 3%-")),
+    Key([], "XF86AudioMute",lazy.spawn("amixer set Master toggle")),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -119,6 +121,12 @@ for i in groups:
             i.name,
             lazy.group[i.name].toscreen(),
             desc="Switch to group {}".format(i.name)),
+
+        Key([mod], "Right", lazy.screen.next_group(),
+            desc="Switch to next group"),
+
+        Key([mod], "Left", lazy.screen.prev_group(),
+            desc="Switch to previous group"),
 
         # mod1 + shift + letter of group = switch to & move focused window to group
         Key([mod, "shift"],
@@ -161,9 +169,11 @@ extension_defaults = widget_defaults.copy()
 screens = [
     Screen(
         top=bar.Bar(
-            [ 
+            [   widget.Sep(padding=3, linewidth=0, background="#2f343f"),
+                widget.Image(filename='~/Downloads/eos-c.png', margin=3, background="#2f343f", mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi")}),
+                widget.Sep(padding=4, linewidth=0, background="#2f343f"), 
                 widget.GroupBox(
-                    #highlight_method='line', # we don't use this because it looks great but it makes the numbers go up, off center
+                                highlight_method='line', # we don't use this because it looks great but it makes the numbers go up, off center
                                 this_screen_border="#5294e2",
                                 this_current_screen_border="#5294e2",
                                 active="#ffffff",
@@ -196,13 +206,32 @@ screens = [
                     },
                     background="#2f343f"),
                 widget.Systray(icon_size = 20),
+                widget.TextBox(
+                       text = '',
+                       padding = 0,
+                       fontsize = 28,
+                       foreground='#2f343f'
+                       ), 
+                widget.Volume(
+                    fmt='  {}',
+                    background="#2f343f",
+                    #volume_down_command="amixer set Master 2%-"
+                ),
+                widget.TextBox(
+                    text = '',
+                    padding = 0,
+                    fontsize = 30,
+                    foreground='#2f343f',
+                    background='#2f343f'
+                ), 
                 widget.Spacer(length=5),
-                                widget.TextBox(
+                widget.TextBox(
                        text = '',
                        padding = 0,
                        fontsize = 28,
                        foreground='#2f343f'
                        ),    
+                widget.Battery(battery=1, discharge_char='    ', low_percentage=0.25, charge_char='    ' , foreground='5bc236', format='{char} {percent:2.0%}', update_interval=30),
                 widget.Clock(format=' %Y-%m-%d %a %I:%M %p',
                              background="#2f343f",
                              foreground='#9bd689'),
