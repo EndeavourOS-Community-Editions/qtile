@@ -229,7 +229,7 @@ screens = [
                        fontsize = 28,
                        foreground='#2f343f'
                        ),    
-                #widget.Battery(battery=1, discharge_char='    ', low_percentage=0.25, charge_char='    ' , foreground='5bc236', format='{char} {percent:2.0%}', update_interval=30),
+                widget.Battery(battery=1, discharge_char='    ', low_percentage=0.25, charge_char='    ' , foreground='5bc236', format='{char} {percent:2.0%}', update_interval=30),
                 widget.Clock(format=' %Y-%m-%d %a %I:%M %p',
                              background="#2f343f",
                              foreground='#9bd689'),
