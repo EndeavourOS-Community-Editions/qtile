@@ -170,10 +170,10 @@ screens = [
     Screen(
         top=bar.Bar(
             [   widget.Sep(padding=3, linewidth=0, background="#2f343f"),
-                widget.Image(filename='~/Downloads/eos-c.png', margin=3, background="#2f343f", mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi")}),
+                widget.Image(filename='~/.config/qtile/eos-c.png', margin=3, background="#2f343f", mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi")}),
                 widget.Sep(padding=4, linewidth=0, background="#2f343f"), 
                 widget.GroupBox(
-                                highlight_method='line', # we don't use this because it looks great but it makes the numbers go up, off center
+                                highlight_method='line',
                                 this_screen_border="#5294e2",
                                 this_current_screen_border="#5294e2",
                                 active="#ffffff",
@@ -213,34 +213,32 @@ screens = [
                        foreground='#2f343f'
                        ), 
                 widget.Volume(
-                    fmt='  {}',
+                    fmt='  {} ',
                     background="#2f343f",
                     #volume_down_command="amixer set Master 2%-"
                 ),
-                widget.TextBox(
-                    text = '',
-                    padding = 0,
-                    fontsize = 30,
-                    foreground='#2f343f',
-                    background='#2f343f'
-                ), 
-                widget.Spacer(length=5),
+                 widget.TextBox(                                                                    
+                       text = '',
+                       padding = 0,
+                       fontsize = 28,
+                       foreground='#2f343f',
+                       ),   
                 widget.TextBox(
                        text = '',
                        padding = 0,
                        fontsize = 28,
                        foreground='#2f343f'
                        ),    
-                widget.Battery(battery=1, discharge_char='    ', low_percentage=0.25, charge_char='    ' , foreground='5bc236', format='{char} {percent:2.0%}', update_interval=30),
+                #widget.Battery(battery=1, discharge_char='    ', low_percentage=0.25, charge_char='    ' , foreground='5bc236', format='{char} {percent:2.0%}', update_interval=30),
                 widget.Clock(format=' %Y-%m-%d %a %I:%M %p',
                              background="#2f343f",
                              foreground='#9bd689'),
-                                                widget.TextBox(
-                       text = '',
+                                                widget.TextBox(                                                
+                                                
+                       text = '',
                        padding = 0,
-                       fontsize = 20,
+                       fontsize = 28,
                        foreground='#2f343f',
-                        background='#2f343f'
                        ),   
                 widget.TextBox(
                     text='',
