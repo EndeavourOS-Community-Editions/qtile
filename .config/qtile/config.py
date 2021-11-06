@@ -37,7 +37,7 @@ def autostart():
     subprocess.call([home])
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "xfce4-terminal"
 
 keys = [
     # Switch between windows
