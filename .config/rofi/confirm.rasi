@@ -1,0 +1,23 @@
+/* Confirm Dialog */
+
+
+* {
+    background-color:       rgba(39,23,59,95%);
+    text-color:             #FFFCFFFF;
+	font:				 	"FantasqueSansMono Nerd Font 12";
+}
+
+window {
+    width:      			225px;
+    padding:    			25px;
+    border:					1px;
+    border-radius:          0px;
+    border-color:           @border;
+    location:               center;
+    y-offset:               -2em;
+}
+
+entry {
+    expand: 				true;
+    text-color:				#FFFCFFFF;
+}
