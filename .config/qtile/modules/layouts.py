@@ -1,9 +1,10 @@
 from libqtile import layout
 from libqtile.config import Match
+from .widgets import colors
 
 layouts = [
-    layout.MonadTall(margin=8, border_focus='#5294e2',
-                     border_normal='#2c5380'),
+    layout.MonadTall(margin=8, border_focus=colors[4],
+                     border_normal='#2c5380', border_width=3 ),
     #layout.Columns(border_focus_stack='#d75f5f'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
@@ -14,6 +15,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
+    #layout.Floating()
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
