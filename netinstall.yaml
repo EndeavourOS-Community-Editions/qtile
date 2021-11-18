@@ -140,11 +140,14 @@
   packages:
     - ttf-nerd-fonts-symbols
     - qtile
-    - ttf-cascadia-code
+    - dunst
+    - ttc-iosevka
+    - ttf-roboto
+    - ttf-ibm-plex
     - arc-gtk-theme-eos
     - xfce4-terminal
-    - pcmanfm-gtk3
-    - picom
+    - thunar
+    - xfce4-terminal
     - alsa-utils
     - papirus-icon-theme
     - pasystray
