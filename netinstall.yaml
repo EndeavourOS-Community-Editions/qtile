@@ -140,14 +140,13 @@
   packages:
     - ttf-nerd-fonts-symbols
     - qtile
-    - dunst
-    - ttc-iosevka
+    - ttf-cascadia-code
     - ttf-roboto
     - ttf-ibm-plex
     - arc-gtk-theme-eos
     - xfce4-terminal
-    - thunar
-    - xfce4-terminal
+    - pcmanfm-gtk3
+    - picom
     - alsa-utils
     - papirus-icon-theme
     - pasystray
@@ -200,6 +199,3 @@ name: "Zen Kernel"
   packages:
     - orca
     - mousetweaks
-
-  
-
