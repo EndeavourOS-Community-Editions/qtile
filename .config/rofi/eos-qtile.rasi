@@ -1,40 +1,40 @@
 configuration {
-	font:			    "Noto Sans Bold 10";
+	font:							"Noto Sans Bold 10";
     show-icons:                     true;
-	icon-theme: 		    "Tela-Purple";
-    display-drun: 		    "";
+	icon-theme: 					"Papirus-Dark";
+    display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
-	sidebar-mode: 		    false;
+	sidebar-mode: 					false;
 }
 
 * {
-    background:                     rgba (39,23,59,95%);
-    background-alt:                 #00000000;
+    background:                     rgba (47, 51, 64, 95%);
+    background-alt:              	#00000000;
     background-bar:                 #f2f2f215;
     foreground:                     #f2f2f2EE;
-    accent:			    #3DAEE966;
+    accent:			            	#3DAEE966;
 }
 
 window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-	border:			    0px;
-	border-color:		    @border;
+	border:							0px;
+	border-color:					@border;
     border-radius:                  0px;
-	width:			    40%;
+	width:							40%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
 }
 
 prompt {
-    enabled: 			    true;
-	padding: 		    0.30% 1% 0% -0.5%;
-	background-color: 	    @background-alt;
-	text-color: 		    @foreground;
-	font:			    "FantasqueSansMono Nerd Font 12";
+    enabled: 						true;
+	padding: 						0.30% 1% 0% -0.5%;
+	background-color: 				@background-alt;
+	text-color: 					@foreground;
+	font:							"FantasqueSansMono Nerd Font 12";
 }
 
 entry {
@@ -49,13 +49,13 @@ entry {
 }
 
 inputbar {
-	children: 		    [ prompt, entry ];
+	children: 						[ prompt, entry ];
     background-color:               @background-bar;
     text-color:                     @foreground;
     expand:                         false;
-	border:			    0% 0% 0% 0%;
+	border:							0% 0% 0% 0%;
     border-radius:                  12px;
-	border-color:		    @accent;
+	border-color:					@accent;
     margin:                         0% 0% 0% 0%;
     padding:                        1.5%;
 }
@@ -72,11 +72,11 @@ listview {
 
 mainbox {
     background-color:               @background-alt;
-	border:			    4;
+	border:							4;
     border-radius:                  4;
-	border-color:		    #7f7fff;
+	border-color:					#7fb4ff;
     children:                       [ inputbar, listview ];
-    spacing:                        2%;
+    spacing:                       	2%;
     padding:                        2% 1% 2% 1%;
 }
 
@@ -89,8 +89,8 @@ element {
 }
 
 element-icon {
-    background-color: 		    #00000000;
-    text-color:       		    inherit;
+    background-color: 				#00000000;
+    text-color:       				inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
     size:                           48px;
@@ -98,8 +98,8 @@ element-icon {
 }
 
 element-text {
-    background-color: 		    #00000000;
-    text-color:       		    inherit;
+    background-color: 				#00000000;
+    text-color:       				inherit;
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -109,7 +109,7 @@ element-text {
 element selected {
     background-color:               @background-bar;
     text-color:                     @foreground;
-	border:			    0% 0% 0% 0%;
+	border:							0% 0% 0% 0%;
     border-radius:                  12px;
-    border-color:                   @accent;
+    border-color:                  	@accent;
 }
