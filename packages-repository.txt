@@ -3,11 +3,12 @@ qtile
 ttf-cascadia-code
 arc-gtk-theme-eos
 xfce4-terminal
-pcmanfm-gtk3
+thunar
+ttf-roboto
+ttf-ibm-plex
 picom
 alsa-utils
 papirus-icon-theme
-pasystray
 feh
 rofi
 i3lock
