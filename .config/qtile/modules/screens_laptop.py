@@ -105,7 +105,6 @@ screens = [
     ],
         28,
         background=colors[6],
-        margin=[8,9,5,9],
     ), 
 ),
 ]
