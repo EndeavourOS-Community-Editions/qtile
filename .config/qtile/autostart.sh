@@ -1,8 +1,5 @@
 #!/bin/sh
 
-#start script to autolock screen and autosuspend when the computer is inactive.
-~/.config/qtile/scripts/locker &
-
 #dunst notifications
 /usr/bin/dunst &
 
