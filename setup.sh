@@ -114,48 +114,7 @@ then
       echo "Directory ~/.local/share created.\n
       you can find wallpapers at : ~/.local/share/endeavouros\n
       you can find fonts at : ~/.local/share/fonts\n"
-  fi
-  
-  
-  if [[ -d ~/.icons ]]; then
-      tar xvf Bibata-Modern.tar.gz -C ~/.icons
-      tar xvf Tela-purple.tar.xz -C ~/.icons
-      echo "Installed icon theme and cursor theme\n"
-      if [[ -d ~/.icons/default ]]; then
-          if [[ -e ~/.icons/default/index.theme ]]; then
-              mv ~/.icons/default/index.theme ~/.icons/default/index.theme.old
-              cp index.theme ~/icons/default/
-              echo "Found existing index.theme in ~/.icons/default, moved to ~/.icons/default/index.theme.old\n"
-              echo "New index.theme at ~/.icons/default/\n"
-          else
-              cp index.theme ~/icons/default/
-              echo "New index.theme at ~/.icons/default/\n"
-          fi
-      else
-          mkdir ~/.icons/default
-          cp index.theme ~/icons/default/
-          echo "New index.theme at ~/.icons/default/\n"
-      fi     
-  else
-      mkdir ~/.icons
-      tar xvf Bibata-Modern.tar.gz -C ~/.icons
-      tar xvf Tela-purple.tar.xz -C ~/.icons
-      echo "Installed icon theme and cursor theme\n"
-      mkdir ~/.icons/default
-      cp index.theme ~/icons/default/
-      echo "New index.theme at ~/.icons/default/\n"
-  fi
-  
-  
-  if [[ -d ~/.themes ]]; then
-      tar xvf Sweet-Dark.tar.xz -C ~/.themes
-      echo "GTK theme installed\n"
-  else
-      mkdir ~/.themes
-      tar xvf Sweet-Dark.tar.xz -C ~/.themes
-      echo "GTK theme installed\n"
-  fi     
-  
+  fi  
   
   if [[ -e ~/.Xresources ]]; then
       mv ~/.Xresources ~/.Xresources.old
