@@ -1,6 +1,6 @@
 configuration {
   show-icons:         true;
-  icon-theme:         "Tela-purple";
+  icon-theme:         "Papirus-Dark";
   theme: "~/.config/rofi/eos-qtile.rasi";
   modi: "drun";
 }
