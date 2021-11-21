@@ -15,12 +15,12 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = none
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
     # The geometry of the message window.
-    # The height is measured in number of notifications everything else
+    # The height is measured in number of notifications everything elxse
     # in pixels.  If the width is omitted but the height is given
     # ("-geometry x2"), the message window expands over the whole screen
     # (dmenu-like).  If width is 0, the window expands to the longest
@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x0-30+20"
+    geometry = "300x5-30-30"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 16
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -61,10 +61,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#7f3fbf"
 
     # Define a color for the separator.
     # possible values are:
@@ -85,7 +85,8 @@
     idle_threshold = 120
 
     ### Text ###
-    font = JetBrains Mono Medium 10
+
+    font = Noto Sans Regular 11
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -113,7 +114,7 @@
     #
     # It's important to note that markup inside the format option will be parsed
     # regardless of what this is set to.
-    markup = full
+    markup = yes
 
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -129,7 +130,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -165,8 +166,8 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-
+    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/16x16/apps/:/usr/share/pixmaps/
     ### History ###
 
     # Should a notification popped up from history be sticky or timeout
@@ -182,7 +183,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/brave
+    browser = /usr/bin/firefox -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -212,7 +213,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 5
+    corner_radius = 0
 
     ### Legacy
 
@@ -235,9 +236,9 @@
     #              invoke it. If there are multiple and no default, open the context menu.
     # * close_current: Close current notification.
     # * close_all: Close all notifications.
-    mouse_left_click = do_action
-    mouse_middle_click = close_all
-    mouse_right_click = close_current
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -274,26 +275,26 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2b2b2b"
+    background = "#28143c"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
-    icon = /home/brodie/.config/dunst/normal.png
+    icon = /usr/share/icons/Arc-X-D/status/16/dialog-information.png
 
 [urgency_normal]
-    background = "#2b2b2b"
+    background = "#28143c"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
-    icon = /home/brodie/.config/dunst/normal.png
+    icon = /usr/share/icons/Arc-X-D/status/16/dialog-question.png
 
 [urgency_critical]
-    background = "#900000"
+    background = "#28143c"
     foreground = "#ffffff"
-    frame_color = "#ff0000"
-    timeout = 5
+    frame_color = "#ff7f7f"
+    timeout = 120
     # Icon for notifications with critical urgency, uncomment to enable
-    icon = /home/brodie/.config/dunst/critical.png
+    icon = /usr/share/icons/Arc-X-D/status/16/dialog-warning.png
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

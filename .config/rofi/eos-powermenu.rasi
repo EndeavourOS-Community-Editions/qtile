@@ -1,0 +1,109 @@
+configuration {
+	font:							"RobotoCondenseds Bold 12";
+    show-icons:                     false;
+	icon-theme: 					"Tela-purple";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+	sidebar-mode: 					false;
+}
+
+window {
+    transparency:                   "real";
+    border:							4;
+    background-color:               rgba (47, 51, 64, 95%);
+    text-color:                     #FFFCFFFF;
+    border-radius:                  5px;
+    border-color:					#7fb4ff;
+    height:                         28.5%;
+    width:                          50%;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+prompt {
+    enabled: 						true;
+    padding:                        0.5% 0.5% 0.5% 0%;
+	background-color: 				rgba (47, 51, 64, 95%);
+	text-color: 					#FFFCFFFF;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							"System |";
+	background-color: 				rgba (47, 51, 64, 95%);
+	text-color: 					#FFFCFFFF;
+    padding:                        0.5% 0.1% 0.5% 0%;
+}
+
+inputbar {
+	children: 						[textbox-prompt-colon,prompt ];
+    background-color:               rgba (47, 51, 64, 95%);
+    text-color:                     #FFFCFFFF;
+    expand:                         false;
+    margin:                         0% 21.3% 0% 0%;
+    padding:                        0.5%;
+    position:                       center;
+}
+
+listview {
+    background-color:               rgba (47, 51, 64, 95%);
+    margin:                         0% 0% 0% 0%;
+    spacing:                        2%;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         horizontal;
+}
+
+mainbox {
+    background-color:               rgba (47, 51, 64, 95%);
+    children:                       [ inputbar,listview ];
+    spacing:                        3.5%;
+    padding:                        4% 0% 0% 2%;
+}
+
+element {
+    background-color:               rgba (47, 51, 64, 95%);
+    text-color:                     #FFFCFFFF;
+    orientation:                    horizontal;
+    border-radius:                  25px;
+}
+
+element-text {
+    background-color: 				#00000000;
+    text-color:       				inherit;
+	font:							"feather 32";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         4.5% 2.7% 4.5% 2.7%;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               #DA4453FF;
+    text-color:                     #FFFCFFFF;
+    border-radius:                  0.2%;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               rgba (47, 51, 64, 95%);
+    text-color:                     #FFFCFFFF;
+}
+
+element selected {
+    background-color:               #ffffff15;
+    text-color:                     #FFFCFFFF;
+    
+}
+
+element selected.urgent {
+    background-color:               #DA4453FF;
+    text-color:                     #FFFCFFFF;
+}
+
+element selected.active {
+    background-color:               #5E6c91ff;
+    color:                          #FFFCFFFF;
+}

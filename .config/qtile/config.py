@@ -9,7 +9,7 @@ import os
 if len(os.listdir('/sys/class/power_supply'))==0 :
     from modules.screens_desktop import screens
 else:
-    from modules.screens import screens
+    from modules.screens_laptop import screens
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List

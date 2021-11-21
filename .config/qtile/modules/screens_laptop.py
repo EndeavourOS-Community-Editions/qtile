@@ -3,11 +3,12 @@ from .widgets import *
 from libqtile.config import Screen
 import os
 
-#It's declerad here and not in widgets, because desktops use smaller fonts.
+#It's declerad here and not in widgets, because laptops use bigger fonts.
 volume = MyVolume(
     fontsize = 15,
     font="RobotoCondensed Bold",
     foreground=colors[2],
+    background=colors[0],
     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("pavucontrol")}
 )
 
@@ -19,52 +20,54 @@ screens = [
             eoslogo,
             separator,
             widget.GroupBox(
-                disable_drag=True,
                 font="RobotoCondensed",
-                fontsize=12,
-                margin_y=5.4,
+                fontsize=14,
+                margin_y=5,
                 margin_x=2,
                 padding_x=4.3,
                 borderwidth=3,
                 active="#0ab5fa",
-                inactive="#615c8a",
+                inactive="615c8a",
                 foreground="#00000",
                 highlight_color=colors[6],
                 highlight_method="line",
                 this_current_screen_border=colors[1],
                 block_highlight_text_color="#ffffff",
             ),
-            systray,
+            systray, 
             widget.Prompt(
                 background=colors[6],
                 font="RobotoCondensed",
-                fontsize=11.7,
+                fontsize=14,
                 foreground="#9fd8fb",
                 ignore_dups_history=True,
             ),
             widget.WindowName(
-                font="RobotoCondensed",
-                fontsize=12.4,
+                font="RobotoConsended",
+                fontsize=15,
                 format="{state}{name}",
-                padding=2,
-                background=colors[6],
-                parse_text=truncate_text,
+                #background=colors[2],
+                #foreground=colors[6],
             ),
-            arrow_a,
             widget.CurrentLayout(
-                font="RobotoCondensed Bold",
-                fontsize=12,
-                background=colors[0],
+                font="RobotoConsended Bold",
+                fontsize=15,
+                background=colors[6],
                 foreground=colors[1],
-                ),
-            arrow_b,
+            ),
+            separator,
+            arrow_a,
             widget.Volume(
                 #background=colors[0],
                 font="RobotoCondensed Bold",
-                fontsize=12,
+                fontsize=15
+                background=colors[0],
                 foreground=colors[2],
             ),
             volume,
+            arrow_b,
+            separator,
+            battery,
             separator,
             arrow_a,
             widget.GenPollText(
@@ -72,47 +75,37 @@ screens = [
                 background=colors[0],
                 foreground=colors[3],
                 update_interval=2,
-                font="RobotoCondensed Bold",
-                # Not working fine with xfce4, works fine with alacritty.
-                #mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("xfce4-terminal -e nmtui")} 
+                fontsize=14,
+                font="RobotoCondensed Bold"   
             ),
             arrow_b,
             separator,
             widget.Clock(
-                foreground=colors[4],
-                #background=colors[0],
-                #fontsize=12,
                 font="RobotoCondensed Bold",
+                foreground=colors[4],
+                #background=colors[5],
+                fontsize=14,
                 format="%d %b, %A  %I:%M %p",
-                fmt="   {}"
-            ),                
-            separator,             
+                fmt="    {}"
+            ),
             arrow_a,
             widget.TextBox(
                 text=' ',
-                background=colors[0],
+                font="RobotoCondensed Bold",
+                fontsize=14,
+                mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(os.path.expanduser("~/.config/qtile/scripts/powermenu.sh"))},            
                 foreground=colors[1],
-                font="RobotoConsended Bold",
-                fontsize=12.5,
-                mouse_callbacks={'Button1':lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/qtile/scripts/powermenu.sh'))},
-                #background=colors[4],
+                background=colors[0],
             ),
             widget.Sep(
                 padding=8,
                 linewidth=0,
                 background=colors[0],
             ),
-        ],
+    ],
         28,
- 
         background=colors[6],
-    ), ),
+    ), 
+),
 ]
-
-
-
-
-
-
-
 

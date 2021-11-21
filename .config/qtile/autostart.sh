@@ -1,9 +1,18 @@
 #!/bin/sh
-feh --bg-scale /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
-picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
+
+#dunst notifications
+/usr/bin/dunst &
+
+#setting the wallpaper
+feh --bg-scale ~/.local/share/endeavouros/eos-wallpaper.png
+
+#start compositor
+picom --experimental-backends &
 
 # Low battery notifier
-~/.config/qtile/scripts/check_battery.sh & disown
+if [ "$(ls -A /sys/class/power_supply)" ]; then
+	~/.config/qtile/scripts/check_battery.sh &
+fi
 
-# Start welcome
+# Start welcome application
 eos-welcome & disown
