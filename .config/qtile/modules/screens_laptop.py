@@ -60,7 +60,7 @@ screens = [
             widget.Volume(
                 #background=colors[0],
                 font="RobotoCondensed Bold",
-                fontsize=15
+                fontsize=15,
                 background=colors[0],
                 foreground=colors[2],
             ),
