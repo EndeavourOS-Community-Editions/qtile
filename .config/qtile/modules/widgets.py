@@ -95,7 +95,7 @@ battery = MyBattery(
     low_percentage=0.25,
     fontsize=15,
     font="RobotoCondensed Bold",
-    background=colors[0],
+    #background=colors[0],
     foreground="#47d665"
 )
 
