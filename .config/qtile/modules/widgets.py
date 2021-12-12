@@ -1,5 +1,4 @@
 from libqtile import widget
-from libqtile.widget.battery import Battery, BatteryState
 from libqtile import qtile
 
 colors = [
@@ -15,44 +14,11 @@ colors = [
 
 
 widget_defaults = dict(
-    font='sans',
+    font='Cantarell',
     fontsize=12,
     padding=3,
 )
-
-class MyBattery(Battery):
-    def build_string(self, status):
-        if self.layout is not None:
-            if status.state == BatteryState.DISCHARGING and status.percent < self.low_percentage:
-                self.layout.colour = self.low_foreground
-            else:
-                self.layout.colour = self.foreground
-        if status.state == BatteryState.DISCHARGING:
-            if status.percent > 0.75:
-                char = ''
-            elif status.percent > 0.45:
-                char = ''
-            else:
-                char = ''
-        elif status.percent >= 1 or status.state == BatteryState.FULL:
-            char = ''
-        elif status.state == BatteryState.EMPTY or \
-                (status.state == BatteryState.UNKNOWN and status.percent == 0):
-            char = ''
-        else:
-            char = ' '
-        return self.format.format(char=char, percent=status.percent)
-
-battery = MyBattery(
-    format='{char}  {percent:2.0%}',
-    low_foreground=colors[1],
-    show_short_text=False,
-    low_percentage=0.25,
-    foreground=colors[6],
-    notify_below=12,
-)
-
-
+extension_defaults = widget_defaults.copy()
 class MyVolume(widget.Volume):
     def _configure(self, qtile, bar):
         widget.Volume._configure(self, qtile, bar)
@@ -86,5 +52,6 @@ volume = MyVolume(
     fontsize=18,
     font='Font Awesome 5 Free',
     foreground=colors[4],
+    background='#2f343f',
     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("pavucontrol")}
 )
