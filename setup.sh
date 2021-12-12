@@ -21,6 +21,7 @@ then
   cp -r .config/dunst ~/.config
   #Just make the files executable by git update-index --chmod=+x low_bat_notifier.sh and then commit to the repo
   chmod +x ~/.config/qtile/scripts/low_bat_notifier.sh
+  cp -r .config/xfce4 ~/.config
   echo 'done'
 fi
 
