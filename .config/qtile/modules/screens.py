@@ -1,6 +1,7 @@
 from libqtile import bar
 from .widgets import *
 from libqtile.config import Screen
+import os
 
 screens = [
     Screen(
@@ -61,7 +62,6 @@ screens = [
                        fontsize = 28,
                        foreground='#2f343f'
                        ),    
-                battery,
                 widget.Clock(format=' %Y-%m-%d %a %I:%M %p',
                              background="#2f343f",
                              foreground='#9bd689'),
