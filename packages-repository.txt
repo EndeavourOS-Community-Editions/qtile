@@ -11,3 +11,4 @@ pasystray
 feh
 rofi
 slock
+dunst
