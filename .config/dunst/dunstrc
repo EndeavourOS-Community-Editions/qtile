@@ -278,14 +278,12 @@
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
-    icon = /home/brodie/.config/dunst/normal.png
 
 [urgency_normal]
     background = "#2b2b2b"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
-    icon = /home/brodie/.config/dunst/normal.png
 
 [urgency_critical]
     background = "#900000"
@@ -293,7 +291,6 @@
     frame_color = "#ff0000"
     timeout = 5
     # Icon for notifications with critical urgency, uncomment to enable
-    icon = /home/brodie/.config/dunst/critical.png
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
