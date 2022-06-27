@@ -25,8 +25,8 @@ do
 		check=1
 		sleep 30
 	elif [ "$state" = "$not_charging" ] && [ -z "$check_running" ] && ( [ "$bat_now" -gt "$low_bat" ]  || [ "$check" -lt 2 ] );then
-		~/.config/qtile/scripts/low_bat.sh
 	else
 		sleep 30
+		~/.config/qtile/scripts/low_bat_notifier.sh
 	fi
 done
