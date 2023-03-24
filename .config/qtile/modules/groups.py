@@ -1,8 +1,22 @@
-from libqtile.config import Key, Group
+from libqtile.config import Scratchpad, DropDown, Key, Group
 from libqtile.command import lazy
 from .keys import keys, mod
 
-groups = [Group(i) for i in "123456789"]
+groups = [
+    Scratchpad(
+        "dropdown",
+        [
+            DropDown(
+                "terminal", "xfce4-terminal", width=0.6, height=0.4, opacity=0.8
+            )
+        ],
+    ),
+    *[Group(i) for i in "123456789"],
+]
+
+keys.extend([
+    Key([mod], "grave", lazy.group["dropdown"].dropdown_toggle("terminal"))
+])
 
 for i in groups:
     keys.extend([
