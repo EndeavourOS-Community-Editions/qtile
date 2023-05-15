@@ -24,7 +24,7 @@ class MyVolume(widget.Volume):
         widget.Volume._configure(self, qtile, bar)
         self.volume = self.get_volume()
         if self.volume <= 0:
-            self.text = ''
+            self.text = '󰆪'
         elif self.volume <= 15:
             self.text = ''
         elif self.volume < 50:
@@ -35,7 +35,7 @@ class MyVolume(widget.Volume):
 
     def _update_drawer(self, wob=False):
         if self.volume <= 0:
-            self.text = ''
+            self.text = '󰆪'
         elif self.volume <= 15:
             self.text = ''
         elif self.volume < 50:
