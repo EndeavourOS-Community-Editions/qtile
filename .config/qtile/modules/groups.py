@@ -1,5 +1,5 @@
 from libqtile.config import Scratchpad, DropDown, Key, Group
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from .keys import keys, mod
 
 groups = [
