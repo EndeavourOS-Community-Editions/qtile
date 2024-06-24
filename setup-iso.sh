@@ -18,3 +18,4 @@ pacman -S --needed --noconfirm - <packages-repository.txt
 
 cd ..
 rm -rf qtile-eos-mine
+systemctl enable sddm
