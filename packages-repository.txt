@@ -12,3 +12,4 @@ feh
 rofi
 slock
 dunst
+eos-sddm-theme
