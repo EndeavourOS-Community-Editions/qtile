@@ -16,7 +16,7 @@ git clone https://github.com/EndeavourOS-Community-Editions/qtile
 cd qtile
 ```
 
-1. Copy the configuration files: <br>
+2. Copy the configuration files: <br>
 
 ```bash
 cp -R .config ~
@@ -24,10 +24,17 @@ cp .Xresources ~
 cp .gtkrc-2.0 ~
 ```
 
-1. Install the required packages
+3. Install the required packages
 
 ```bash
 sudo pacman -Syu --needed - < packages-repository.txt
+```
+
+4. Enable Login Manager (SDDM)
+
+```bash
+sudo systemctl enable sddm.service
+sudo systemctl start sddm.service
 ```
 
 > **Note:** Currently there is no installation file </br>
