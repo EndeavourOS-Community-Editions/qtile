@@ -22,6 +22,10 @@ copy_config() {
 	chmod -R +x ~/.config/qtile/scripts/i3lock-fancy/*.sh
 	chmod +x ~/.config/rofi/powermenu.sh
 	chown -R $username:$username ~/.config
+	cp .Xresources ~/.Xresources 
+	cp .gtkrc-2.0 ~/.gtkrc-2.0 
+	chown $username:$username ~/.Xresources 
+	chown $username:$username ~/.gtkrc-2.0 
 }
 
 echo -e """\e[35;1m
