@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 username="$1"
-git clone https://github.com/parham-dev27/qtile-eos-mine --branch rewrite
+git clone https://github.com/EndeavourOS-Community-Editions/qtile
 
 cd qtile-eos-mine
 cp -R .config /home/$username/
