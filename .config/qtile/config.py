@@ -28,7 +28,7 @@ keys = [
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Rofi
-    Key([mod], "r", lazy.spawn("rofi -show combi"), desc="spawn rofi"),
+    Key([mod], "r", lazy.spawn("rofi -show drun"), desc="spawn rofi"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key(
@@ -228,7 +228,7 @@ screens = [
                     margin=3,
                     background="#2f343f",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn("rofi -show combi")
+                        "Button1": lambda: qtile.cmd_spawn("rofi -show drun")
                     },
                 ),
                 widget.Sep(padding=5, linewidth=0, background="#2f343f"),
