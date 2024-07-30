@@ -6,6 +6,24 @@
 
 ## Installation:
 
+### Install Script
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/EndeavourOS-Community-Editions/qtile
+
+cd qtile
+```
+
+2. Run the installation script:
+
+```bash
+./setup.sh
+```
+
+### Manual Installation
+
 > **Important:** Don't forget to backup your current configuration files
 
 1. Clone the repo:
@@ -36,9 +54,6 @@ sudo pacman -Syu --needed - < packages-repository.txt
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service
 ```
-
-> **Note:** Currently there is no installation file </br>
-> #contributions-welcome
 
 ## Screenshots:
 
