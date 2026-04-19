@@ -259,7 +259,7 @@ screens = [
                     fontsize=13,
                     padding=3,
                 ),
-                widget.CurrentLayoutIcon(scale=0.70),
+                widget.CurrentLayout(scale=0.70),
                 widget.Sep(padding=4, linewidth=0),
                 widget.TextBox(
                     text="",
